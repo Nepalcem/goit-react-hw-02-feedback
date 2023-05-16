@@ -35,7 +35,7 @@ export class FeedbackWidget extends Component {
       this.state;
     return (
       <div>
-        <Section title={'Please leave feedback'}>
+        <Section title={'Please leave a feedback'}>
           <FeedbackOptions onLeaveFeedback={this.incrementFeedback} />
         </Section>
         {total > 0 ? (
