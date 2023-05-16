@@ -1,12 +1,10 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Section from './SectionTitle';
 import Statistics from './Statistics';
 import FeedbackOptions from './FeedbackOptions';
+import Notification from './Notification';
 
 export class FeedbackWidget extends Component {
-  // static propTypes = {};
-
   state = {
     good: 0,
     neutral: 0,
@@ -40,15 +38,19 @@ export class FeedbackWidget extends Component {
         <Section title={'Please leave feedback'}>
           <FeedbackOptions onLeaveFeedback={this.incrementFeedback} />
         </Section>
-        <Section title={'Statistics'}>
-          <Statistics
-            good={good}
-            neutral={neutral}
-            bad={bad}
-            total={total}
-            positivePercentage={positiveFeedbackPercentage}
-          />
-        </Section>
+        {total > 0 ? (
+          <Section title={'Statistics'}>
+            <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={total}
+              positivePercentage={positiveFeedbackPercentage}
+            />
+          </Section>
+        ) : (
+          <Notification message={'There is no feedback yet'}></Notification>
+        )}
       </div>
     );
   }
