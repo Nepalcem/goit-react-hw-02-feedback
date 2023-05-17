@@ -1,4 +1,5 @@
-import FeedbackWidget from './feedback-widget/Feedbackwidget';
+import FeedbackWidget from '../components/feedback-widget/Feedbackwidget';
+
 export const App = () => {
   return (
     <div>
