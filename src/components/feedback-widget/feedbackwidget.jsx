@@ -4,7 +4,7 @@ import Statistics from './Statistics';
 import FeedbackOptions from './FeedbackOptions';
 import Notification from './Notification';
 
-export class FeedbackWidget extends Component {
+export class Feedbackwidget extends Component {
   state = {
     good: 0,
     neutral: 0,
@@ -51,4 +51,4 @@ export class FeedbackWidget extends Component {
   }
 }
 
-export default FeedbackWidget;
+export default Feedbackwidget;
