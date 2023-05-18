@@ -13,7 +13,6 @@ export class Feedbackwidget extends Component {
 
   incrementFeedback = type => {
     this.setState(prevState => ({
-      ...prevState,
       [type]: prevState[type] + 1,
     }));
   };
