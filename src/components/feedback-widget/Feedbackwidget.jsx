@@ -30,7 +30,7 @@ export class Feedbackwidget extends Component {
     return (
       <div>
         <Section title={'Please leave a feedback'}>
-          <FeedbackOptions onLeaveFeedback={this.incrementFeedback} />
+          <FeedbackOptions options={['good', 'neutral', 'bad']} onLeaveFeedback={this.incrementFeedback} />
         </Section>
         {total > 0 ? (
           <Section title={'Statistics'}>
